@@ -2,4 +2,4 @@
 
 This project is made for learning purpose!
 
-## A platform for dog images and memes.
+## A fun platform for dog images.
