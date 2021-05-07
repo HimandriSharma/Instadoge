@@ -1,4 +1,4 @@
-
+import Image from './api/Images';
 import './App.css';
 
 function App() {
@@ -6,6 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         Hello world!
+        <Image/>
       </header>
     </div>
   );
