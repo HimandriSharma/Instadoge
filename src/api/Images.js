@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState,useEffect} from 'react'
-import {Img} from 'react-image';
+import './Images.css';
+// import {Img} from 'react-image';
 function Images() {
     const [images, setimages] = useState([]);
     useEffect(() => {
@@ -13,11 +14,19 @@ function Images() {
     }, [])
     function ShowImage(){
         return images.map((img,index)=>(
-            <Img
-                src={img}
-                index={index}
-                key={index}
-            />
+            <img src={img} style={{
+                width: "60%",
+                height: "40%",
+                borderRadius: "5%",
+                margin:"10px"
+              }}
+              alt=""/>
+            // <Img
+            //     src={img}
+            //     index={index}
+            //     key={index}
+            //     className="styleImage"
+            // />
         ));
     }
     return (
@@ -28,4 +37,3 @@ function Images() {
 }
 
 export default Images
-

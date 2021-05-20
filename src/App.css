@@ -6,7 +6,21 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+.header{
+  background-color: yellow;
+  width: 100vw;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 100px;
+  color: purple;
+   /* BackgroundColor:"yellow";
+   width:"100%",color:"black",
+   height:"5vh",display:"flex",
+   justifyContent:"center",
+   textAlign:"center" */
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -14,7 +28,7 @@
 }
 
 .App-header {
-  background-color: #f0108f38;
+  background-color: #000000ef;
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
