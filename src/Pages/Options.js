@@ -1,7 +1,7 @@
 import React from 'react'
 import Home from './Home'
 import Images from '../api/Images'
-import Select from './Select'
+import Select from '../api/Select'
 import {
     BrowserRouter as Router,
     Switch,

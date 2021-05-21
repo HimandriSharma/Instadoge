@@ -1,13 +1,14 @@
 import React from 'react'
-// import './components.css'
+import '../App.css'
 import TansitionArray from './TransitionArray'
-import WhiteLogo from '../assets/LogoWhite.png'
+import LogoWhite from '../assets/LogoWhite.png'
 function Home() {
     return (
       
-        <div className="Home">
-              <TansitionArray/>
-            <img src={WhiteLogo}
+        <div className="App">
+            {/* <TansitionArray/> */}
+            <img src={LogoWhite}
+                alt = "Loading ..."
                 style={{
                     width:"100%",
                     height: "100%"

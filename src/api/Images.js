@@ -21,6 +21,7 @@ function Images() {
                 margin:"10px"
               }}
               alt=""/>
+              
             // <Img
             //     src={img}
             //     index={index}
@@ -32,6 +33,21 @@ function Images() {
     return (
         <div>
             {ShowImage()}
+            <button 
+            alt = " "
+            onClick={() => window.location.reload(false)}
+            style={{
+                fontSize:"30px",
+                height: "20%",
+                width: "100%",
+                margin: "20px",
+                backgroundColor: "black",
+                color:"white",
+                // borderRadius:"20%"
+            }}
+            >
+                Load more!
+            </button>
         </div>
     )
 }

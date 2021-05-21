@@ -1,9 +1,9 @@
 import axios from 'axios';
 import React, { useState,useEffect} from 'react'
 
-var breed = "husky";
+function Images(props) {
+    var breed = props.name;
 var url = "https://dog.ceo/api/breed/"+breed+"/images"
-function Images() {
     const [images, setimages] = useState([]);
     useEffect(() => {
         axios.get(url)
@@ -32,22 +32,9 @@ function Images() {
     }
     return (
         <div>
+            <div>{props.name}</div>
             {ShowImage()}
-            <button 
-            alt = " "
-            onClick={() => window.location.reload(false)}
-            style={{
-                fontSize:"30px",
-                height: "20%",
-                width: "100%",
-                margin: "20px",
-                backgroundColor: "black",
-                color:"white",
-                // borderRadius:"20%"
-            }}
-            >
-                Load more!
-            </button>
+            
         </div>
     )
 }
