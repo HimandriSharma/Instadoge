@@ -1,6 +1,6 @@
 import React from 'react'
 import '../App.css'
-import TansitionArray from './TransitionArray'
+
 import LogoWhite from '../assets/LogoWhite.png'
 function Home() {
     return (

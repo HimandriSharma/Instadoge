@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react'
 import Home from './Pages/Home'
 import Images from './api/Images'
-import Select from './api/Select'
+
 
 import {
     BrowserRouter as Router,

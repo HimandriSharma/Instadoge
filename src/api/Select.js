@@ -12,7 +12,7 @@ var url = "https://dog.ceo/api/breed/"+breed+"/images"
             console.log(res.data.message);
         })
         
-    }, [])
+    })
     function ShowImage(){
         return images.map((img,index)=>(
             <img
