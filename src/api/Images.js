@@ -1,7 +1,8 @@
 import axios from 'axios';
-import React, { useState,useEffect} from 'react'
+import React, { useState,useEffect} from 'react';
+import CloseIcon from '@material-ui/icons/Close';
 import './Images.css';
-// import {Img} from 'react-image';
+
 function Images() {
     const [images, setimages] = useState([]);
     useEffect(() => {
@@ -12,43 +13,31 @@ function Images() {
         })
         
     }, [])
-    function ShowImage(){
-        return images.map((img,index)=>(
-            <img src={img} style={{
-                width: "60%",
-                height: "40%",
-                borderRadius: "5%",
-                margin:"10px"
-              }}
-              alt=""/>
-              
-            // <Img
-            //     src={img}
-            //     index={index}
-            //     key={index}
-            //     className="styleImage"
-            // />
-        ));
+    const [model, setModel] = useState(false);
+    const [tempingSrc, setTempImgSrc] = useState('')
+    function getImage(imgSrc){
+        setTempImgSrc(imgSrc);
+        setModel(true);
     }
+    console.log(images);
     return (
-        <div>
-            {ShowImage()}
-            <button 
-            alt = " "
-            onClick={() => window.location.reload(false)}
-            style={{
-                fontSize:"30px",
-                height: "20%",
-                width: "100%",
-                margin: "20px",
-                backgroundColor: "black",
-                color:"white",
-                // borderRadius:"20%"
-            }}
-            >
-                Load more!
-            </button>
-        </div>
+        <>
+            <div className={model?"model open":"model"}>
+                <img src={tempingSrc} alt=""/>
+                <CloseIcon onClick={()=>setModel(false)}/>
+            </div>
+            <div className="gallery">
+            {
+                images.map((image)=>{
+                    return(
+                        <div className="pics" onClick={()=>getImage(image)}>
+                            <img src={image} alt="" style={{width: '100%'}}/>
+                        </div>
+                    )
+                })
+            }
+            </div>
+        </>
     )
 }
 
